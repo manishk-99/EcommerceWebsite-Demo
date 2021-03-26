@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import CartItem from "./CartItem";
 import { random, commerce } from "faker";
 import { Container, Col, Row } from "reactstrap";
 
@@ -42,7 +43,9 @@ const BuyPage = ({ addInCart }) => {
       <h1 className="text-success text-center">Buy Page</h1>
       <Row>
         {product.map((product) => (
-          <span key={product.id}>{product.productName}</span>
+          <Col md={4} key={product.id}>
+            <CartItem product={product} addInCart={addInCart} />
+          </Col>
         ))}
       </Row>
     </Container>
