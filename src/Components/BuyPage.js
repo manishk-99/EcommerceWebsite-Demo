@@ -13,12 +13,12 @@ const BuyPage = ({ addInCart }) => {
   const [product, setProduct] = useState([]);
 
   // const fetchPhotos = async () => {
-  //   const {data} = await Axios.get(url, {
+  //   const { data } = await Axios.get(url, {
   //     header: {
   //       Authorization: apiKey
   //     }
-  //   })
-  //   const {photos} = data;
+  //   });
+  //   const { photos } = data;
 
   const fetchPhotos = async () => {
     const { data } = await Axios.get(localurl);
